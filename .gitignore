@@ -1,1 +1,3 @@
 /.gradle/
+/.idea/
+src/main/resources/com/backend/movie_recommender_backend/init_db_entries/secrets.yml
