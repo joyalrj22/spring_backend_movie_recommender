@@ -13,8 +13,6 @@ import java.util.Map;
 
 public class MovieContentInitializer extends TableContentInitializer {
   private static final String MOVIES_METADATA = "movies_metadata.csv";
-  // https://stackoverflow.com/questions/44342276/how-to-push-code-to-github-hiding-the-api-keys
-  private static final String TMDB_API_KEY = "7a858c80b3c2d2d7e52cc7c183306670";
   private static final String TMDB_HTTP_QUERY_TEMPLATE = "https://api.themoviedb.org/3/find/tt0111161?api_key=%s&external_source=%s";
   private static final String TMDB_URL = "https://api.themoviedb.org/3/find/tt0111161";
 
