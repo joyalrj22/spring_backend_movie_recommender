@@ -20,7 +20,7 @@ public class MovieController {
     return movieRepository.findAll();
   }
 
-  @PostMapping(path="/add")
-  public @ResponseBody String addNewMovie (@RequestParam)
+//  @PostMapping(path="/add")
+//  public @ResponseBody String addNewMovie (@RequestParam)
 
 }

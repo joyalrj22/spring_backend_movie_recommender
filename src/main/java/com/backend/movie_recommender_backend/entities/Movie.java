@@ -8,12 +8,11 @@ import jakarta.persistence.Id;
 @Entity
 public class Movie {
   @Id
-  @GeneratedValue(strategy = GenerationType.AUTO)
+//  @GeneratedValue(strategy = GenerationType.AUTO)
   private Integer id;
 
   private String title;
   private String summary;
-  private Integer rating;
   private byte[] poster;
 
 
@@ -46,13 +45,5 @@ public class Movie {
 
   public void setPoster(byte[] poster) {
     this.poster = poster;
-  }
-
-  public Integer getRating() {
-    return rating;
-  }
-
-  public void setRating(Integer rating) {
-    this.rating = rating;
   }
 }
