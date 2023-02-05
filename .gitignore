@@ -1,4 +1,4 @@
 /.gradle/
 /.idea/
 /build/
-src/main/resources/com/backend/movie_recommender_backend/init_db_entries/secrets.yml
+src/main/resources/com/backend/movie_recommender_backend/init_db_entries/secret.yml
