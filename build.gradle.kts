@@ -15,7 +15,9 @@ repositories {
 dependencies {
 	implementation("org.springframework.boot:spring-boot-starter-web")
 	implementation("com.fasterxml.jackson.dataformat:jackson-dataformat-csv")
+	implementation("com.fasterxml.jackson.dataformat:jackson-dataformat-yaml")
     implementation("org.projectlombok:lombok:1.18.22")
+	implementation("com.google.guava:guava:24.0-jre")
     testImplementation("org.springframework.boot:spring-boot-starter-test")
 	implementation("org.springframework.boot:spring-boot-starter-data-jpa")
 	runtimeOnly("mysql:mysql-connector-java")

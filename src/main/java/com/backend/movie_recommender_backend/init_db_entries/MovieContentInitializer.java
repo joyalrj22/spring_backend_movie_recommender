@@ -13,22 +13,12 @@ import java.util.Map;
 
 public class MovieContentInitializer extends TableContentInitializer {
   private static final String MOVIES_METADATA = "movies_metadata.csv";
-  private static final String TMDB_HTTP_QUERY_TEMPLATE = "https://api.themoviedb.org/3/find/tt0111161?api_key=%s&external_source=%s";
-  private static final String TMDB_URL = "https://api.themoviedb.org/3/find/tt0111161";
 
   @Override
   public void initialize() throws Exception {
     final URI movieCsvUri = TableContentInitializer.class.getResource(MOVIES_METADATA).toURI();
     final List<MovieRow> movieData = loadCsvData(movieCsvUri, MovieRow.class);
-  }
-
-  private void getMoviePoster(final String imdb_id) throws IOException {
-    URL url = new URL(TMDB_URL);
-    HttpURLConnection con = (HttpURLConnection) url.openConnection();
-    con.setRequestMethod("GET");
-    Map<String, String> parameters = new HashMap<>();
-    parameters.put("api_key", TMDB_API_KEY);
-    parameters.put("external_source", imdb_id);
+    System.out.println(new MoviePosterExtractor().getMoviePoster(movieData.get(1).getImdb_id()));
   }
 
   @Data
@@ -38,10 +28,5 @@ public class MovieContentInitializer extends TableContentInitializer {
     String imdb_id;
     String original_title;
     String overview;
-  }
-
-  public static void main(String[] args) throws Exception {
-    new MovieContentInitializer().initialize();
-
   }
 }
