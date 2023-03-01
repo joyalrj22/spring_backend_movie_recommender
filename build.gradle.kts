@@ -18,6 +18,7 @@ dependencies {
 	implementation("com.fasterxml.jackson.dataformat:jackson-dataformat-yaml")
     implementation("org.projectlombok:lombok:1.18.22")
 	implementation("com.google.guava:guava:24.0-jre")
+	implementation("com.google.code.gson:gson")
     testImplementation("org.springframework.boot:spring-boot-starter-test")
 	implementation("org.springframework.boot:spring-boot-starter-data-jpa")
 	runtimeOnly("mysql:mysql-connector-java")

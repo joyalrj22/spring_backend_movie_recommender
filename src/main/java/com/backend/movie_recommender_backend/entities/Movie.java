@@ -1,49 +1,34 @@
 package com.backend.movie_recommender_backend.entities;
 
+import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
+import lombok.Data;
+import lombok.ToString;
 
 @Entity
+@Data
+@ToString
 public class Movie {
+
+  @GeneratedValue(strategy = GenerationType.AUTO)
   @Id
-//  @GeneratedValue(strategy = GenerationType.AUTO)
+  @Column(nullable = false)
   private Integer id;
 
+  @Column(nullable = false)
   private String title;
-  private String summary;
-  private byte[] poster;
+  @Column(nullable = true)
+  private String posterUrl;
 
-
-  public Integer getId() {
-    return id;
-  }
-
-  public void setId(Integer id) {
-    this.id = id;
-  }
-
-  public String getTitle() {
-    return title;
-  }
-
-  public void setTitle(String title) {
+  public Movie(final String title, final String posterUrl) {
     this.title = title;
+    this.posterUrl = posterUrl;
   }
 
-  public String getSummary() {
-    return summary;
-  }
+  public Movie() {
 
-  public void setSummary(String summary) {
-    this.summary = summary;
-  }
-  public byte[] getPoster() {
-    return poster;
-  }
-
-  public void setPoster(byte[] poster) {
-    this.poster = poster;
   }
 }

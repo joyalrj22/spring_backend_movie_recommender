@@ -1,29 +1,18 @@
 package com.backend.movie_recommender_backend.entities;
 
+import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
 import jakarta.persistence.Id;
+import lombok.Data;
+import lombok.ToString;
 
 @Entity
+@Data
+@ToString
 public class User {
   @Id
+  @Column(nullable = false)
   private Integer id;
+  @Column(nullable = false)
   private boolean dataSetUser;
-
-  public Integer getId() {
-    return id;
-  }
-
-  public void setId(Integer id) {
-    this.id = id;
-  }
-
-
-  public boolean getDataSetUser() {
-    return dataSetUser;
-  }
-
-  public void setDataSetUser(boolean dataSetUser) {
-    this.dataSetUser = dataSetUser;
-  }
-
 }

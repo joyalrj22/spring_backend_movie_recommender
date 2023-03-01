@@ -5,8 +5,12 @@ import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
 import jakarta.persistence.ManyToOne;
+import lombok.Data;
+import lombok.ToString;
 
 @Entity
+@Data
+@ToString
 public class UserRating {
   @Id
   @GeneratedValue(strategy = GenerationType.AUTO)
@@ -17,37 +21,5 @@ public class UserRating {
   private Movie movie;
 
   private Integer rating;
-
-  public Integer getId() {
-    return id;
-  }
-
-  public void setId(Integer id) {
-    this.id = id;
-  }
-
-  public User getUser() {
-    return user;
-  }
-
-  public void setUser(User user) {
-    this.user = user;
-  }
-
-  public Movie getMovie() {
-    return movie;
-  }
-
-  public void setMovie(Movie movie) {
-    this.movie = movie;
-  }
-
-  public Integer getRating() {
-    return rating;
-  }
-
-  public void setRating(Integer rating) {
-    this.rating = rating;
-  }
 
 }

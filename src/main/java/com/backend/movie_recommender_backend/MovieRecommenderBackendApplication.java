@@ -15,11 +15,6 @@ public class MovieRecommenderBackendApplication {
 
 	public static void main(String[] args) {
 		SpringApplication.run(MovieRecommenderBackendApplication.class, args);
-		try {
-			new MovieContentInitializer().initialize();
-		} catch (Exception e) {
-			throw new RuntimeException(e);
-		}
 	}
 
 	@Bean

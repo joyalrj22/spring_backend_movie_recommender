@@ -1,5 +1,6 @@
 package com.backend.movie_recommender_backend.init_db_entries;
 
+import com.backend.movie_recommender_backend.repositories.MovieRepository;
 import com.fasterxml.jackson.databind.DeserializationFeature;
 import com.fasterxml.jackson.databind.MappingIterator;
 import com.fasterxml.jackson.dataformat.csv.CsvMapper;
@@ -33,6 +34,6 @@ public abstract class TableContentInitializer {
     return rows;
   }
 
-  public abstract void initialize() throws Exception;
+  public abstract void initialize(final MovieRepository movieRepository) throws Exception;
 
 }
